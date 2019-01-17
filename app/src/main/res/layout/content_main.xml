@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity"
+    android:layout_marginTop="150dp"
+    tools:showIn="@layout/activity_main">
+
+
+    <LinearLayout
+        android:id="@+id/statusLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Status:"
+            android:layout_weight="1"/>
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="84dp"
+            android:textColor="@color/colorPrimary"
+            android:text="NA"
+            android:layout_weight="1"/>
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/editTextLongitude"
+        android:hint="Longitude"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:text="101.591708"
+        android:inputType="numberDecimal"
+        android:layout_below="@+id/statusLayout"/>
+
+    <EditText
+        android:id="@+id/editTextLatitude"
+        android:hint="Latitude"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:text="3.115261"
+        android:inputType="numberDecimal"
+        android:layout_below="@+id/editTextLongitude"/>
+
+
+    <EditText
+        android:id="@+id/editTextWifi"
+        android:hint="Wifi Name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="text"
+        android:text="BlazingSpeed-TIME5Ghz"
+        android:layout_below="@+id/editTextLatitude"/>
+
+
+    <LinearLayout
+        android:id="@+id/statusLayoutTop"
+        android:layout_below="@+id/editTextWifi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/add_geofences_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="addGeofencesButtonHandler"
+            android:text="@string/add_geofences" />
+
+        <Button
+            android:id="@+id/remove_geofences_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="removeGeofencesButtonHandler"
+            android:text="@string/remove_geofences" />
+    </LinearLayout>
+</RelativeLayout>
