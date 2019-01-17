@@ -1,8 +1,8 @@
 Apk is placed on path: https://drive.google.com/open?id=17JM9dsfU6ikSuXy3K-FANR4LYBtzj5hN
 
 App Usage: 
-1. Enter valid latitude and longitude and press "ADD GeoFence" button to activate the geofence.
-2. Press "REMOVE GEOFENCES" to clear previous fence setup and it will allow to enter geo fence again by enabling the "Add GeoFence" button.
+1. Enter valid latitude and longitude and press "ADD GEOFENCE" button to activate the geofence.
+2. Press "REMOVE GEOFENCE" to clear previous fence setup and it will allow to enter geo fence again by enabling the "ADD GEOFENCE" button.
 3. Give the correct Wifi name to test the wifi functionality.
 
 
