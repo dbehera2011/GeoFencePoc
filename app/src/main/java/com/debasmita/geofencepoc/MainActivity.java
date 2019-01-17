@@ -24,10 +24,9 @@ import android.util.Log;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
-import com.debasmita.geofencepoc.R;
 
 import com.debasmita.geoclass.Constants;
-import com.debasmita.geoclass.GeofenceErrorMessages;
+import com.debasmita.geoclass.ErrorMessages;
 import com.google.android.gms.location.Geofence;
 import com.google.android.gms.location.GeofencingClient;
 import com.google.android.gms.location.GeofencingEvent;
@@ -76,14 +75,15 @@ public class MainActivity extends AppCompatActivity  implements OnCompleteListen
      */
     private PendingIntent mGeofencePendingIntent;
 
-    // Buttons for kicking off the process of adding or removing geofences.
+    // Views mapped to UI
     private Button mAddGeofencesButton;
     private Button mRemoveGeofencesButton;
     EditText mLongitudeEditText;
     EditText mLatitudeEditText;
-
     TextView mFenceStatusTextView;
     EditText mWifiName;
+
+
     private BroadcastReceiver fenceChangeReceiver = null;
     private IntentFilter fenceEntryExitFilter = new IntentFilter(Constants.FENCE_ACTION);
 
@@ -124,7 +124,7 @@ public class MainActivity extends AppCompatActivity  implements OnCompleteListen
 
                 GeofencingEvent geofencingEvent = GeofencingEvent.fromIntent(intent);
                 if (geofencingEvent.hasError()) {
-                    String errorMessage = GeofenceErrorMessages.getErrorString(getApplicationContext(),
+                    String errorMessage = ErrorMessages.getErrorString(getApplicationContext(),
                             geofencingEvent.getErrorCode());
                     Log.e(TAG, errorMessage);
                     return;
@@ -191,6 +191,16 @@ public class MainActivity extends AppCompatActivity  implements OnCompleteListen
             performPendingGeofenceTask();
         }
     }
+
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        unregisterReceiver(fenceChangeReceiver);
+    }
+
+
+
 
     /**
      * Builds and returns a GeofencingRequest. Specifies the list of geofences to be monitored.
@@ -297,7 +307,7 @@ public class MainActivity extends AppCompatActivity  implements OnCompleteListen
             Toast.makeText(this, getString(messageId), Toast.LENGTH_SHORT).show();
         } else {
             // Get the status code for the error and log it using a user-friendly message.
-            String errorMessage = GeofenceErrorMessages.getErrorString(this, task.getException());
+            String errorMessage = ErrorMessages.getErrorString(this, task.getException());
             Log.w(TAG, errorMessage);
         }
     }

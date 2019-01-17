@@ -23,7 +23,7 @@ public class Constants {
      */
     static public final long GEOFENCE_EXPIRATION_IN_MILLISECONDS =
             GEOFENCE_EXPIRATION_IN_HOURS * 60 * 60 * 1000;
-    static public final float GEOFENCE_RADIUS_IN_METERS = 1609; // 1 mile, 1.6 km
+    static public final float GEOFENCE_RADIUS_IN_METERS = 500; // 500 meter
 
     public static final String FENCE_ACTION = "com.com.debasmita.geofencepoc.ACTION_RECEIVE";
 

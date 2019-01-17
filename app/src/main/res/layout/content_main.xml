@@ -25,7 +25,7 @@
             android:layout_width="wrap_content"
             android:layout_height="84dp"
             android:textColor="@color/colorPrimary"
-            android:text="NA"
+            android:text="@string/not_available"
             android:layout_weight="1"/>
     </LinearLayout>
 
@@ -62,7 +62,7 @@
 
 
     <LinearLayout
-        android:id="@+id/statusLayoutTop"
+        android:id="@+id/statusLayoutBottons"
         android:layout_below="@+id/editTextWifi"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
@@ -83,4 +83,13 @@
             android:onClick="removeGeofencesButtonHandler"
             android:text="@string/remove_geofences" />
     </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/note"
+        android:layout_width="wrap_content"
+        android:layout_height="84dp"
+        android:textColor="@color/colorPrimary"
+        android:text="@string/note_radious"
+        android:layout_below="@+id/statusLayoutBottons"/>
 </RelativeLayout>

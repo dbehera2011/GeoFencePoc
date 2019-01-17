@@ -7,8 +7,8 @@ import com.debasmita.geofencepoc.R;
 import com.google.android.gms.common.api.ApiException;
 import com.google.android.gms.location.GeofenceStatusCodes;
 
-public class GeofenceErrorMessages {
-    private GeofenceErrorMessages() {}
+public class ErrorMessages {
+    private ErrorMessages() {}
 
     /**
      * Returns the error string for a geofencing exception.

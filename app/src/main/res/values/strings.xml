@@ -3,8 +3,8 @@
     <string name="title_activity_main">GeoFencePoc</string>
 
     <!-- Buttons strings -->
-    <string name="add_geofences">Add geofences</string>
-    <string name="remove_geofences">Remove geofences</string>
+    <string name="add_geofences">Add geofence</string>
+    <string name="remove_geofences">Remove geofence</string>
 
     <!-- Error strings -->
     <string name="geofence_not_available">Geofence service is not available now</string>
@@ -36,4 +36,5 @@
     <string name="geofences_added">Geo Fence</string>
     <string name="geofences_removed">GeoFence removed</string>
     <string name="not_available">Unknown</string>
+    <string name="note_radious">Geo Fence radious is set to 500 meter.</string>
 </resources>
