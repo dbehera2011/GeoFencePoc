@@ -10,4 +10,4 @@ Please note: below are the  list of steps not taken care on this project due to 
 
 1. Input validation of longitude and latitude field is not taken care of. So please provide valid longitude and latitude.
 2. Test cases are written for only a few methods.
-3. Geo Fence radious is hard coded to 500 meters.
+3. GeoFence radius is hard coded to 500 meters.
